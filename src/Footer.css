@@ -1,0 +1,24 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Match the dark theme */
+    padding: 20px 0; /* Add vertical padding */
+    text-align: center; /* Center content */
+    color: white; /* White text to contrast the background */
+    font-family: 'Bodoni', serif; /* Match the font style */
+    font-size: 1.2rem; /* Adjust text size */
+    position: relative; /* For a static footer */
+    width: 100%; /* Full width */
+    z-index: 1; /* Keep above background elements */
+}
+
+.footer-text {
+    margin: 0; /* Remove default margins */
+    letter-spacing: 1px; /* Add spacing for better readability */
+    text-transform: uppercase; /* Optional: Capitalize text */
+    opacity: 0.9; /* Slight transparency */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}

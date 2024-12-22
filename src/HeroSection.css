@@ -1,0 +1,81 @@
+/* Full-screen hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh;          /* Full viewport height */
+  background-color: black; /* Fallback color */
+  position: relative;
+  padding: 0 10px;        /* Reduced padding for smaller devices */
+  background: url('./buenaVibraHero.webp') no-repeat center center fixed; /* Background image */
+  background-size: cover;  /* This covers the entire section */
+  transition: background-position 0.2s ease-out;
+}
+
+/* Hero image centered in the middle of the page */
+.hero-image {
+  width: 80vw;            /* Increased width for mobile */
+  max-width: 100%;        /* Prevent overflow */
+  height: auto;           /* Maintain aspect ratio */
+  position: relative;      /* Position for layering */
+  z-index: 1;             /* Ensure it's above other elements */
+}
+
+/* Bottom section divider line image */
+.section-divider {
+  width: 50vw;            /* Default width for larger screens */
+  max-width: 666px;       /* Optional max width */
+  height: auto;           /* Maintain aspect ratio */
+  margin-top: 5px;        /* Position just below the hero image */
+  z-index: 1;             /* Ensure it's above the background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-image {
+    width: 70vw;          /* Adjust for smaller desktops */
+  }
+  .section-divider {
+    width: 45vw;          /* Adjust for smaller desktops */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;         /* Adjust height on smaller screens */
+    background-size: contain; /* Adjust to contain to fit within the section */
+    background-attachment: scroll; /* Disable fixed background for mobile */
+  }
+  
+  .hero-image {
+    width: 80vw;          /* Increase for tablets */
+    margin-top: 10vh;     /* Add top margin to push logo down */
+    margin-bottom: 0;     /* Remove space below the logo */
+  }
+
+  .section-divider {
+    width: 40vw;          /* Slightly reduce for tablets */
+    margin-top: 0;       /* Remove margin to close gap with next section */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    margin-top: 20vh;
+    height: 30vh;         /* Maintain height for very small screens */
+    background-size: contain; /* Ensure it fits within the section */
+    background-position: center; /* Center background for better visibility */
+  }
+
+  .hero-image {
+    width: 85vw;          /* Adjust for mobile */
+    margin-top: 20vh;     /* Add margin to position the logo lower */
+    margin-bottom: 0;     /* Remove space below the logo */
+  }
+
+  .section-divider {
+    width: 35vw;          /* Further reduce width for mobile */
+    margin-top: 0;       /* Remove margin to close gap with next section */
+  }
+}

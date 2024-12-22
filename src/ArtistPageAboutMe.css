@@ -1,0 +1,112 @@
+/* Artist Page About Me Section */
+.artist-page-about-me-section {
+    display: flex;
+    align-items: flex-start;  /* Align items at the start (top) */
+    justify-content: space-between; /* Space between text and image */
+    padding: 60px;        /* Adjusted padding for larger screens */
+    background-color: black; /* Background color */
+    color: white;         /* Default text color */
+    border: none;         /* Ensure there's no border */
+    flex-direction: row;  /* Ensure items are in a row for desktop */
+    position: relative;   /* Position relative for child elements */
+    overflow: hidden;     /* Prevent overflow of images */
+}
+
+/* Artist Page About Me Content Styles */
+.artist-page-about-me-content {
+    max-width: 60%;       /* Limit the width of the text content */
+    text-align: left;     /* Align text to the left */
+}
+
+.artist-page-about-me-title {
+    font-family: 'Mangaran', sans-serif; /* Font style for the title */
+    font-size: 3.9rem;   /* Title size */
+    margin-bottom: 16px;   /* Space below title */
+}
+
+.artist-page-about-me-subtitle {
+    font-family: 'Bodoni', serif; /* Font style for the subtitle */
+    color: #729a7e;      /* Subtitle color */
+    font-size: 2rem;     /* Adjusted subtitle size */
+    margin: 0;           /* Remove margins */
+    margin-bottom: 20px; /* Space below subtitle */
+    text-transform: uppercase;
+    white-space: nowrap;  /* Prevent line wrapping */
+    width: fit-content;   /* Width of the subtitle based on content */
+}
+
+.artist-page-about-me-body {
+    font-family: 'Avenir', sans-serif; /* Font style for the body text */
+    font-size: 1.4rem;     /* Adjusted body text size */
+    line-height: 1.6;      /* Line height for readability */
+    max-width: 800px;      /* Set a max-width for the body text for better line length */
+}
+
+/* Container for artist image */
+.artist-page-about-me-image {
+    max-width: 35%;       /* Limit the width of the image */
+    flex-shrink: 0;       /* Prevent image from shrinking */
+    margin-top: 20px;     /* Space above the image */
+}
+
+.artist-page-about-me-image img {
+    width: 100%;          /* Make the image responsive */
+    height: auto;         /* Maintain aspect ratio */
+}
+
+/* Divider Styles */
+.section-divider-container {
+    display: flex;
+    justify-content: center; /* Center the divider horizontally */
+    margin-top: 20px;       /* Space above the divider */
+    width: 100%;             /* Full width to ensure proper alignment */
+}
+
+.section-divider {
+    width: 50vw;           /* Default width for larger screens */
+    max-width: 666px;      /* Optional max width */
+    height: auto;          /* Maintain aspect ratio */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .artist-page-about-me-section {
+        padding: 40px;          /* Reduced padding for mobile */
+        flex-direction: column;  /* Stack items vertically on mobile */
+        align-items: center;     /* Center items */
+    }
+
+    .artist-page-about-me-content {
+        max-width: 90%;          /* Allow more width for text content on mobile */
+        text-align: center;       /* Center text on mobile */
+    }
+
+    .artist-page-about-me-title {
+        font-size: 2.5rem;     /* Adjust font size for mobile */
+        margin-bottom: 10px;   /* Adjust margin for mobile */
+    }
+
+    .artist-page-about-me-subtitle {
+        font-size: 1.5rem;     /* Adjust font size for mobile */
+        margin-top: 0;         /* Remove negative margin for better alignment */
+        margin-bottom: 20px;   /* Adjust space below subtitle */
+        white-space: normal;    /* Allow wrapping on mobile */
+    }
+
+    .artist-page-about-me-body {
+        font-size: 1rem;       /* Adjust font size for mobile */
+        padding: 0 15px;       /* Add horizontal padding for body text */
+        max-width: 100%;       /* Set max-width to 100% for better responsiveness */
+    }
+
+    .artist-page-about-me-image {
+        max-width: 90%;         /* Increase max width for image on mobile */
+        margin-top: 20px;       /* Add spacing above the image */
+    }
+
+    .section-divider {
+        width: 80vw;            /* Adjust width for mobile */
+        max-width: 400px;       /* Optional max width for mobile */
+        margin-top: 15px;       /* Adjust margin for mobile */
+    }
+}

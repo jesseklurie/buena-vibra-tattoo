@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Mangaran';
+  src: url('./fonts/mangarans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -6,7 +13,9 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+p {
+  font-family:'Mangaran' ;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,0 +1,144 @@
+.contact-section {
+    background-image: url('./contact.webp'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixed background */
+    min-height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Relative positioning for the content */
+    overflow: hidden; /* Prevent layout issues */
+    padding: 20px; /* Add padding for mobile */
+}
+
+
+.content {
+    background-color: transparent; /* Transparent background */
+    padding: 50px; /* Adjust padding for better readability */
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Optional blur effect */
+    position: relative;
+    z-index: 1;
+    max-width: 1200px; /* Limit content width */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact-title {
+    font-family: 'Bodoni', serif;
+    font-size: 2.5rem; /* Adjust font size for mobile */
+    color: white;
+    margin-bottom: 20px; /* Reduce margin for smaller screens */
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Add space between items */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: flex-start; /* Align icons to the start */
+    flex: 1; /* Allow flexible width */
+    min-width: 250px; /* Ensure proper size on smaller screens */
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Adjust spacing between icons */
+}
+
+/* .contact-icon img {
+    width: 40px; 
+    height: auto;
+    margin-right: 8px;
+    transition: width 0.3s ease;
+} */
+
+.contact-icon img {
+    width: 40px; /* Base size for desktop */
+    max-width: 100%; /* Ensure images scale down */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px;
+    transition: width 0.3s ease;
+}
+
+
+.contact-icon a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.contact-icon a:hover {
+    color: #729a7e; /* Hover color */
+}
+
+.map {
+    flex: 1;
+    width: 100%; /* Ensure the map uses full width */
+    max-width: 600px; /* Limit map width on larger screens */
+    height: auto; /* Allow iframe to scale dynamically */
+    aspect-ratio: 16/9; /* Ensure proper aspect ratio */
+    border: none; /* Remove the iframe border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for emphasis */
+    margin-top: 20px; /* Add space between map and other elements */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        background-attachment: scroll; /* Fix for mobile */
+        background-size: auto; /* Adjust size for tablets */
+    }
+    .contact-title {
+        font-size: 2rem; /* Smaller title font size */
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+        gap: 30px; /* Increase spacing */
+    }
+
+    .contact-icon img {
+        width: 35px; /* Smaller size for tablets */
+    }
+
+    .map {
+        max-width: 100%; /* Take full width on smaller screens */
+        aspect-ratio: 16/9; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        background-attachment: scroll; /* Avoid issues with fixed backgrounds */
+        background-size: cover; /* Ensure it covers the screen */
+        background-position: top center; /* Center focus for smaller screens */
+    }
+    .contact-title {
+        font-size: 1.8rem; /* Further reduce title size */
+    }
+
+    .contact-icon img {
+        width: 30px; /* Smaller size for mobile */
+    }
+
+    .contact-icon p {
+        font-size: 0.9rem; /* Smaller text for mobile */
+    }
+
+    .map {
+        height: 200px; /* Use fixed height for very small screens */
+    }
+}

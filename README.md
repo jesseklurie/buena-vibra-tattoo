@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+src="https://www.google.com/maps/embed/v1/place?q=Buena+Vibra+Tattoo+Shop,+Jacó,+Costa+Rica&key=AIzaSyAJYZQY7WMGNGpeXCt2BrjIVWDqaxSPF0Q"
+
+gcloud builds submit -t us-east1-docker.pkg.dev/soluna-mystica/buena-vibra-tattoo/buena-vibra-tattoo:3 ./

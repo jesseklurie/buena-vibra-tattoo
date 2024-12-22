@@ -1,0 +1,25 @@
+
+
+/* Divider Styles */
+.section-divider-container {
+    display: flex;
+    justify-content: center; /* Center the divider horizontally */
+    margin-top: 20px;       /* Space above the divider */
+    width: 100%;             /* Full width to ensure proper alignment */
+}
+
+.section-divider {
+    width: 50vw;           /* Default width for larger screens */
+    max-width: 666px;      /* Optional max width */
+    height: auto;          /* Maintain aspect ratio */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .section-divider {
+        width: 80vw;            /* Adjust width for mobile */
+        max-width: 400px;       /* Optional max width for mobile */
+        margin-top: 15px;       /* Adjust margin for mobile */
+    }
+}

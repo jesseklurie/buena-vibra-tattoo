@@ -1,0 +1,36 @@
+.care-container {
+    font-family: 'Arial', sans-serif;
+    background: #003300; /* Match green background */
+    color: #ffd700; /* Gold text color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  
+  .instructions {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .instructions li {
+    margin-bottom: 10px;
+  }
+  
+  ol.instructions {
+    padding-left: 20px;
+  }
+  

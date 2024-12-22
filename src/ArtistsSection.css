@@ -1,0 +1,130 @@
+/* Section Styling */
+.artists-section {
+  background-color: #000;
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0; /* Initial opacity for transition effect */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Smooth transition for opacity and transform */
+  transform: translateY(-30px); /* Start slightly above */
+}
+
+/* Fly-in Class */
+.artists-section.fly-in {
+  opacity: 1; /* Make fully visible */
+  transform: translateY(0); /* Reset to normal position */
+}
+
+/* Title Styling */
+.artists-title {
+  font-family: 'Bodoni', serif;
+  src: url('./fonts/BodoniModa_72pt-Regular.ttf') format('truetype');
+  font-size: 4.2rem; /* Increased from 3rem */
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+
+/* Grid Layout for Artists */
+.artists-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Artist Card Styling */
+.artist-card {
+  text-align: center;
+  max-width: 300px; /* Limit card width */
+  width: auto; /* Allow cards to fit their content */
+}
+
+/* Image Container with Circular Shape */
+.artist-image {
+  overflow: hidden; /* Hide any overflow from the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* Allow the container to fit the image's natural size */
+  height: auto; /* Maintain natural height */
+}
+
+.artist-image img {
+  width: auto; /* Keep the image's natural width */
+  height: auto; /* Keep the image's natural height */
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  max-height: 100%; /* Ensure the image doesn't exceed the container height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image fills the circular shape */
+}
+
+/* Artist Name Styling */
+.artist-name {
+  font-family: 'Bodoni', serif;
+  font-size: 2.52rem; /* Increased from 1.8rem */
+  color: white;
+  margin-top: 10px; /* Reduced margin to 10px */
+  text-decoration: none;
+}
+
+/* Artist Style/Subtitle */
+.artist-style {
+  font-family: 'Bodoni', serif;
+  white-space: nowrap;
+  src: url('./fonts/BodoniModa_72pt-Regular.ttf') format('truetype');
+  font-size: 1.4rem; /* Increased from 1rem */
+  color: #4b7253; /* Greenish text */
+  font-weight: 100;
+  margin-bottom: 15px;
+  line-height: 2.1rem; /* 50% increase from a reasonable default of 1.4rem */
+}
+
+/* Instagram Icon Styling */
+.instagram-icon img {
+  margin-top: 10px;
+  cursor: pointer;
+  width: 24px; /* Ensure the icon size is appropriate */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .artists-title {
+    font-size: 3.5rem; /* Adjusted for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .artists-title {
+    font-size: 2.8rem; /* Adjusted for smaller screens */
+  }
+  
+  .artists-grid {
+    gap: 40px; /* Reduce gap on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .artists-title {
+    font-size: 2.1rem; /* Adjusted for mobile */
+  }
+
+  .artists-grid {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 30px;
+  }
+
+  .artist-card {
+    max-width: none; /* Allow card to take full width */
+  }
+}
+
+@media (max-width: 576px) {
+  .artist-name {
+    font-size: 2.1rem; /* Adjusted for mobile */
+  }
+
+  .artist-style {
+    font-size: 1.26rem; /* Adjusted for mobile */
+  }
+}

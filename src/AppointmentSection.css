@@ -1,0 +1,86 @@
+/* AppointmentSection.css */
+.appointment-section {
+    background-image: url('./agenda.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Use min-height for flexibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px; /* Add padding for small screens */
+    overflow: hidden;
+    box-sizing: border-box; /* Ensure padding is considered in width/height */
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 30px; /* Adjust padding for smaller screens */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+    width: 90%; /* Limit content width on smaller screens */
+    max-width: 600px; /* Optional: Limit max width for larger screens */
+  }
+  
+  .appointment-title {
+    font-family: 'Bodoni', serif;
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    color: white;
+    margin-bottom: 15px; /* Adjust spacing */
+  }
+  
+  .subtitle {
+    font-family: 'Bodoni', serif;
+    font-size: 1.5rem; /* Adjust font size */
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    font-family: 'Bodoni', serif;
+    font-size: 1.2rem; /* Adjust button font size */
+    color: white;
+    background-color: transparent;
+    border: 2px solid white; /* Add consistent border */
+    padding: 10px 20px; /* Adjust padding */
+    border-radius: 50px; /* Maintain rounded style */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .appointment-section {
+      background-attachment: scroll; /* Disable fixed background for smoother scrolling */
+      min-height: auto; /* Allow height to adjust based on content */
+      padding: 10px; /* Add padding for better fit */
+    }
+  
+    .content {
+      padding: 20px; /* Reduce padding for smaller screens */
+    }
+  
+    .appointment-title {
+      font-size: 1.8rem; /* Smaller font for titles */
+    }
+  
+    .subtitle {
+      font-size: 1.2rem; /* Smaller font for subtitles */
+    }
+  
+    .cta-button {
+      font-size: 1rem; /* Smaller button font */
+      padding: 8px 16px; /* Adjust padding */
+    }
+  }
+  
